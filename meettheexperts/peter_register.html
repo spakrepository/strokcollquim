@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Peter Schellinger - Register</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/jquery.countdown.css" />
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/Validate_Admin.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100715616-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+  <script>
+	function validateMe(){
+	
+		if(trim(document.getElementById("name").value) === "") {
+			alert("Enter Name");
+			document.getElementById("name").focus();
+			return false;
+		}
+
+
+		if(trim(document.getElementById("city").value) === "") {
+			alert("Enter City");
+			document.getElementById("city").focus();
+			return false;
+		}
+
+		if(trim(document.getElementById("email").value) === "") {
+			alert("Enter Email Id");
+			document.getElementById("email").focus();
+			return false;
+		}
+
+			if(trim(document.getElementById("mobile").value) === "") {
+			alert("Enter Mobile No");
+			document.getElementById("mobile").focus();
+			return false;
+		}
+
+		if(trim(document.getElementById("attendance").value) === "") {
+			alert("select Confirm my attendance");
+			document.getElementById("attendance").focus();
+			return false;
+		}
+
+		
+    if(trim(document.getElementById("attendance").value) !== "No") {
+
+
+if(document.getElementById("rdwebcast").checked) {
+			if(trim(document.getElementById("webcast").value) === "") {
+				alert("select Webcast");
+				document.getElementById("webcast").focus();
+				return false;
+			}
+		}
+
+
+
+		if(document.getElementById("rdlive").checked) {
+			if(trim(document.getElementById("live").value) === "") {
+				alert("select Live");
+				document.getElementById("live").focus();
+				return false;
+			}
+		}
+		
+
+
+    }
+		
+	}
+
+
+function WebCastClick()
+{
+	document.getElementById("webcast").disabled = false;
+	document.getElementById("live").disabled = true;
+	return false;
+}
+
+function LiveClick()
+{
+	document.getElementById("webcast").disabled = true;
+	document.getElementById("live").disabled = false;
+	return false;
+}
+	</script>
+
+
+  </head>
+  <body>
+   <!--Start Top Bar-->
+    <div class="container-fluid top-container">
+      <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" id="left-text">
+            <a href="index.html" target="_self"><img src="img/mte-Logo.png" class="img-responsive" /> </a>
+            <span>29<sup>th</sup> JUNE - 2<sup>nd</sup> JULY 2017</span>
+            <p id="demo"></p>
+          </div> <!--End Left Col--> 
+      </div> <!--End Row-->
+    </div> <!--End Container--> 
+   <!--End Top Bar-->  
+   
+   <!--Start Navigation Bar-->
+    <div class="container-fluid nav-container">
+          <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#" style="display:none;">WebSiteName</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html" target="_self">About The Expert</a></li>
+            <li><a href="webcast.html" target="_self">Webcast</a></li>
+             <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Agenda
+                <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="in_hospital.html">In Hospital Meeting</a></li>
+                    <li><a href="meettheexpert.html">Meet The Expert</a></li>
+                  </ul>
+              </li>
+             <li><a href="ask_the_master.html" target="_self">Ask The Expert</a></li>
+            <li class="active"><a href="peter_register.html" target="_self">Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div> <!--End Container-->
+   <!--End Navigation Bar-->
+   
+   <!--Start Content-->
+   <div id="gradient-background-color">
+     <div class="container">
+       <div class="row" id="margin-top">
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <h2>Register</h2>
+               <form role="form" id="frm1" name="frm1" method="POST" action="live-check.asp?pg=reg" onsubmit="return validateMe();">
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input class="form-control" id="name" name="name" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="city">City:</label>
+                  <input class="form-control" id="city" name="city" placeholder="" type="text">
+                </div>
+                 <div class="form-group">
+                  <label for="email">Email Id: </label>
+                  <input class="form-control" id="email" name="email" placeholder="" type="text">
+                </div>
+                  <div class="form-group">
+                  <label for="mobile">Mobile No: </label>
+                  <input class="form-control" id="mobile" name="phone" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="confirm">Confirm my attendance: </label>
+                      <select name="attendance" id="attendance" class="form-control" style="height: 50px;">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Maybe">Maybe</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <input name="via" value="Webcast" id="rdwebcast" onclick="WebCastClick()" type="radio"> Webcast &nbsp; &nbsp; &nbsp; &nbsp;
+                    <input name="via" value="Live" id="rdlive" checked="" onclick="LiveClick()" type="radio"> Live
+    			</div>
+                  <div class="form-group">
+                  <label for="confirm">Webcast:</label>
+                      <select name="webcast" class="form-control" style="height: 50px;" id="webcast" disabled="">
+                        <option value="">Select</option>
+                        <option value="Webcast 1 Delhi 29th June-2-3pm">Webcast 1 : 29th June 2017; 2pm - 3pm</option>
+                        <option value="Webcast 2 Delhi 1st July-3-4pm">Webcast 2 : 1st July 2017; 3pm - 4pm</option>
+                        </select>
+                </div>
+                  
+                   <div class="form-group">
+                  <label for="confirm">Live: </label>
+                      <select name="live" class="form-control" style="height: 50px;" id="live">
+						  <option value="">Select</option>
+                        <!--<option value="In-Hospital Meeting - Taj Palace, New Delhi; 1:00 - 3:00 pm, 29th June 2017">In-Hospital Meeting -  New Delhi; 1:00 - 3:00 pm, 29th June 2017</option>-->
+                        <option value="Meet The Expert - Taj Palace, New Delhi; 8:30 - 10:00 pm, 29th June 2017">Meet The Expert - India Habitat Centre, New Delhi; 8:30 - 10:00 pm, 29th June 2017</option>
+                        <!--<option value="In-Hospital Meeting - Hyderabad; 1.00pm - 3.00 pm, 30th June 2017">In-Hospital Meeting  - Hyderabad; 1:00 - 3:00 pm, 30th June 2017</option>-->
+                        <option value="Meet The Expert - ITC Kakatiya, Hyderabad; 8:30 - 10:00 pm, 30th June 2017">Meet The Expert - ITC Kakatiya, Hyderabad; 8:30 - 10:00 pm, 30th June 2017</option>
+                        <!--<option value="In-Hospital Meeting  - PSG Hospital, Coimbatore; 2:00 - 3:00 pm, 1st July 2017">In-Hospital Meeting  - PSG Hospital, Coimbatore; 2:00 - 3:00 pm, 1st July 2017</option>-->
+                        <option value="Meet The Expert - Le Meridien, Coimbatore; 8:00 - 10:00 pm, 1st July 2017">Meet The Expert - Radisson Blu, Coimbatore; 8:00 - 10:00 pm, 1st July 2017</option>
+                        <option value="Meet The Expert - J W Marriot, Bangalore; 1:00 - 3:00 pm, 2nd July 2017">Meet The Expert - J W Marriot, Bangalore; 1:00 - 3:00 pm, 2nd July 2017</option>
+                        </select>
+                </div>
+                  
+                <div class="text-right text-xs-left">
+                <button type="submit" class="btn btn-default btn-adjust">Submit</button>
+                <br><br>
+                </div>
+              </form>
+            </div> <!--End Left Col-->  
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
+               <div class="right-side-img">
+                 <img src="img/peter.jpg" class="img-responsive">
+                  <h2>Prof. Peter Schellinger</h2>
+                  <strong>Chairman</strong>
+                  <p>
+                    Departments of Neurology & Neurogeriatrics, <br /> Clinical Centre Johannes Wesling in Minden, Germany
+                  </p>
+               </div> <!--right-side-img-->
+            </div> <!--end col-->
+        </div> <!--End Row-->
+        <div> <!--end container-->
+</div> <!--end container-fluid-->
+   <!--End Content-->
+<br />   
+<br />   
+    <!--Script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+	<script src="js/script.js"></script>
+
+  <script>
+// Set the date we're counting down to
+var countDownDate = new Date("June 29, 2017 15:37:25").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "D " + hours + "H "
+    + minutes + "M " + seconds + "S ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+  </body>
+</html>

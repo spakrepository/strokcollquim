@@ -1,0 +1,23 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+
+Sub Session_OnStart
+'    Session("connectstr") = "Driver={SQL Server};Server=10.11.11.2;Database=chemistdirect;UID=chemistdirect;PWD=tceridtsimehc290704"
+ Session("connectstr") = "Driver={SQL Server};Server=Sqlplesk5.securehostdns.com,1533;Database=physiogel;UID=physiogel;PWD=DRftgyhu@123"
+  '  Session("connectstr") = "Driver={SQL Server};Server=guru-pc\sqlexpress;Database=physiogel;Trusted_Connection=Yes;pooling=false"
+
+End Sub
+
+
+
+SUB Application_OnStart
+   	 Application("RootPath")=""
+'	Application("RootPath")="/"
+	application("RootEditor")="/Admin/Editor"
+	Application("bgcolor")="#FFFFFF"
+	Application("bgcolor1")="#F2F2F2"
+End Sub
+Sub Session_OnEnd     
+
+End Sub
+</SCRIPT>
+

@@ -1,0 +1,24 @@
+<html>
+<body>
+
+<form id="frm1" name="frm1" action="mailers.asp" method="post">
+Send Email to <select id="cmbsendto" name="cmbsendto">
+	<option value="1">Select</option>
+	<option value="1">1 Member</option>
+	<option value="2">2 Members</option>
+	<option value="5">5 Members</option>
+
+</select> <br><br>
+From <input type="text" id="txtsubject" name="txtsubject"> <br><br>
+Subject <input type="text" id="txtsubject" name="txtsubject"> <br><br>
+Message <br>
+<textarea rows="20" cols="100" name="mailbody" id="mailbody"></textarea>
+
+<br><br>
+<input type="submit" text="Send">
+<input type="reset" text="reset">
+
+
+</form>
+</body>
+</html>

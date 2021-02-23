@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Georg Nickenig - Contact Us</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script src="js/Validate_Admin.js"></script>
+
+	
+  </head>
+  <body>
+   <!--Start Top Bar-->
+    <div class="container top-container">
+      <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right" id="left-text">
+            <p>ANTICOAGULATION CARE 3.0</p>
+          </div> <!--End Left Col-->
+          
+          
+            &nbsp;
+          <img src="img/lg.png">
+          <!--
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="right-text">
+            <p>Prof. Georg Nickenig <br><span>University of Bonn, Germany</span></p>
+          </div>--> <!--End Right Col-->
+      </div> <!--End Row-->
+    </div> <!--End Container--> 
+   <!--End Top Bar-->  
+   
+   <!--Start Navigation Bar-->
+    <div class="container nav-container">
+          <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#" style="display:none;">WebSiteName</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html" target="_self">About Georg Nickenig</a></li>
+            <li><a href="schedule.html" target="_self">Schedule</a></li>
+            <li><a href="agenda.html" target="_self">Agenda</a></li>
+            <li><a href="ask-questions.html" target="_self">Ask the Master</a></li>
+              <li><a href="georg_register.html" target="_self">Register</a></li>
+            <li><a href="contact-us.html" target="_self">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div> <!--End Container-->
+   <!--End Navigation Bar-->
+   
+   <!--Start Content-->
+   <div class="container" id="gradient-background-color">
+       <div class="row" id="margin-top">
+         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+              <h2>Thank You</h2>
+		
+             <div style="margin-top:40px;"><p id="msgid"></p></div>
+             
+            </div> <!--End Left Col-->  
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 prof-xs-margin-top">
+              <div class="text-right">
+                <img src="img/prof.png" class="image-responsive">
+              </div>
+            </div> <!--End Right Col-->
+        </div> <!--End Row-->
+</div>
+   <!--End Content-->
+    <!--Script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script>
+
+	function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+var visit = getParameterByName('visit');
+
+console.log(visit);
+
+var visitMsg = 'Thank you your message has been sent and our team will get back to you soon.';
+
+switch(visit.toLowerCase()) {
+  case 'yes':
+    visitMsg = 'Thank you for registration. See you there.';
+  break;
+  case 'no':
+  visitMsg = 'Oops! We Will miss you. We will share key highlights of this program post event. Thank you.';
+  break;
+  case 'maybe':
+  visitMsg = 'Thank you for registration. Hope you will make it.';
+  break;
+  default: 
+  visitMsg = 'Thank you your message has been sent and our team will get back to you soon.';
+  break;
+}
+
+console.log(visitMsg);
+document.getElementById('msgid').innerHTML = visitMsg;
+
+	</script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+
+@import "../fonts/font-awesome/css/font-awesome.css";
+
+@font-face {
+    font-family: 'open-sans';
+    src: url('../fonts/Helvetica/Light/Helvetica.eot');
+    src: url('../fonts/Helvetica/Light/Helvetica.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Helvetica/Light/Helvetica.woff') format('woff'),
+		 url('../fonts/Helvetica/Light/Helvetica.woff2') format('woff2'),
+         url('../fonts/Helvetica/Light/Helvetica.ttf') format('truetype'),
+         url('../fonts/Helvetica/Light/Helvetica.svg#helvetica') format('svg');
+         }
+  
+@font-face {
+font-family: 'second';
+src: url('../fonts/converted-files/ITCAvantGardeStd-Bk.eot');
+src: url('../fonts/converted-files/ITCAvantGardeStd-Bk.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/converted-files/ITCAvantGardeStd-Bk.woff') format('woff'),
+        url('../fonts/converted-files/ITCAvantGardeStd-Bk.woff2') format('woff2'),
+        url('../fonts/converted-files/ITCAvantGardeStd-Bk.ttf') format('truetype'),
+        url('../fonts/converted-files/ITCAvantGardeStd-Bk.svg#second') format('svg');
+        }
+
+
+* {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding:0; margin:0;} 
+
+html, body {width:100%; height:100%; margin:0; padding:0;}   
+
+
+body {font-family:'Helvetice Neue', sans-serif; font-size:14px; font-weight:500; font-style:normal; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:100%;  } 
+
+h1, h2, h3, h4, h5, h6, span, p {font-family:'Helvetice Neue', sans-serif;}
+
+p  { font-size:15px; color:#000000; line-height: 20px; margin-bottom: 15px; text-align:justify; letter-spacing: 0.5px; word-spacing: 1px;}
+
+h1 { font-size:30px; font-weight:bold;  color:#000066; padding-top: 30px; padding-top: 15px;} 
+
+h2 {font-size:18px; font-weight:bold; color:#000066; padding-top:20px; padding-bottom:10px;}
+
+fieldset { border: 0; max-width: 100%; }
+  
+img { border:0; height: auto;  max-width:100%;} 
+
+a  {outline:0 !important;}
+
+/***** Links ****/
+
+h2, p {
+    color: #fff;
+}
+
+.padding-left-0 {
+    padding-left: 0;
+}
+
+.padding-right-0 {
+    padding-right: 0;
+}
+
+.margin-left {
+    margin-left: 0;
+}
+
+.margin-right-0 {
+    margin-right: 0;
+}
+
+.black-background {
+    background: #000;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.question-answer {
+    height: 100vh;
+    text-align: center;
+}
+
+.question-answer > video {
+   width: 100%;
+   margin-bottom: 20px;
+}
+
+.question-answer > p {
+    font-size: 11px;
+    font-weight: 100;
+    font-family: 'second';
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+    font-family: 'second';
+}
+
